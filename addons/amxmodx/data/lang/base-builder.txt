@@ -1,0 +1,56 @@
+[en]
+ROUND_MESSAGE = Para mover bloques y construir, miralos y mantene apretada la E (+use)
+
+WIN_ZOMBIE = Ganaron los Zombies!
+WIN_BUILDER = Ganaron los Constructores!
+
+DEATH_ZOMBIE = Has muerto!^nReviviras en %d segundos...
+DEATH_HUMAN = Has sido infectado!^nReviviras en %d segundos...
+
+BUILD_TIMER = Tiempo de Construccion
+PREP_TIMER = Tiempo de Preparacion
+
+SWAP_ANNOUNCE = Los equipos han sido intercambiados
+PREP_ANNOUNCE = Los sobrevivientes han revivido para probar sus bases
+RELEASE_ANNOUNCE = Los zombies han sido liberados!
+INFECT_ANNOUNCE = La infeccion pasa por la sangre de %s
+
+ADMIN_REVIVE = Un admin te ha revivido
+ADMIN_GUNS = Un admin te ha rehabilitado tu menu de armas
+ADMIN_BUILDBAN = Un admin te ha %s de tus privilegios de construccion
+ADMIN_SWAP = Un admin te ha cambiado de equipo
+
+FAIL_KNIFE = Solo puedes utilizar cuchillo en la fase de construccion
+FAIL_DROP = No puedes tirar armas
+FAIL_BUY = No puedes comprar nada
+FAIL_SPAWN = No puedes revivir ahora!
+FAIL_ACCESS = No tienes acceso a ese comando
+FAIL_NAME = Tu nick no es valido
+FAIL_DEAD = El jugador targeteado esta muerto
+FAIL_LOCK = No puedes (des)bloquear bloques despues de que haya empezado la ronda
+
+COLOR_PICKED = Tu color ha sido elegido al azar
+COLOR_NONE = No hay nadie usando
+COLOR_YOURS = Tu color es
+COLOR_RANDOM = Tu color ha sido elegido al azar
+
+BUILD_SPAM = Para de spammear el comando!
+BUILD_BANNED = Has sido baneado, no puedes construir!
+BUILD_CLAIM_NEW = Este bloque ahora es tuyo
+BUILD_CLAIM_MAX = Ya tienes %d bloques, no puedes tener mas
+BUILD_CLAIM_LOST = Has perdido un bloque
+BUILD_CLAIM_FAIL = No puedes reclamar bloques ya reclamados
+BUILD_NOTIME = No puedes mover objetos despues del tiempo de construccion
+
+OBJECT_MAX = distancia maxima alcanzada
+OBJECT_PUSH = empujando...
+OBJECT_MIN = distancia minima alcanzada
+OBJECT_PULL = trayendo...
+
+CLASS_CURRENT = Esta ya es tu clase
+CLASS_NO_ACCESS = No tienes acceso para utilizar esa clase
+CLASS_RESPAWN = Tu nueva clase sera cargada cuando revivas
+
+HUD_HEALTH = Vida
+HUD_CLASS = Clase
+HUD_GOAL = Objetivo de Creditos
