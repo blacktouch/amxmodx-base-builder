@@ -540,7 +540,6 @@ public plugin_init()
 	for (new i = 1; i < sizeof g_szWpnEntNames; i++)
 		if (g_szWpnEntNames[i][0]) RegisterHam(Ham_Item_Deploy, g_szWpnEntNames[i], "ham_ItemDeploy_Post", 1)
 	
-	register_forward(FM_GetGameDescription, 		"fw_GetGameDescription")
 	register_forward(FM_SetClientKeyValue, 		"fw_SetClientKeyValue")
 	register_forward(FM_ClientUserInfoChanged, 	"fw_ClientUserInfoChanged")
 	register_forward(FM_CmdStart, 			"fw_CmdStart");
@@ -548,7 +547,7 @@ public plugin_init()
 	register_forward(FM_EmitSound,			"fw_EmitSound")
 	register_forward(FM_ClientKill,			"fw_Suicide")
 	if (g_iShowMovers)
-		register_forward(FM_TraceLine, 		"fw_Traceline")
+		register_forward(FM_TraceLine, 		"fw_Traceline", 1)
 	
 	register_clcmd("drop", "clcmd_drop")
 	register_clcmd("buy", "clcmd_buy")
@@ -638,12 +637,6 @@ public plugin_natives()
 	register_native("zp_get_user_next_class","native_get_user_next_class", 1)
 	register_native("zp_set_user_zombie_class","native_set_user_zombie_class", 1)
 	register_native("zp_get_user_zombie","native_is_user_zombie", 1)
-}
-
-public fw_GetGameDescription()
-{
-	forward_return(FMV_STRING, g_szModName)
-	return FMRES_SUPERCEDE;
 }
 
 public client_putinserver(id)
@@ -2125,13 +2118,13 @@ public fw_Traceline(Float:start[3], Float:end[3], conditions, id, trace)
 					{
 						get_user_name(GetEntMover(ent),szCurMover,31)
 						if (!GetLastMover(ent))
-							ShowSyncHudMsg(id, g_HudSync, "Moviendo: %s^nUltimo: NONE", szCurMover);
+							ShowSyncHudMsg(id, g_HudSync, "Moviendo: %s^nUltimo: Nadie", szCurMover);
 					}
 					if (GetLastMover(ent))
 					{
 						get_user_name(GetLastMover(ent),szLastMover,31)
 						if (!GetEntMover(ent))
-							ShowSyncHudMsg(id, g_HudSync, "Moviendo: NONE^nUltimo: %s", szLastMover);
+							ShowSyncHudMsg(id, g_HudSync, "Moviendo: Nadie^nUltimo: %s", szLastMover);
 					}
 					if (GetEntMover(ent) && GetLastMover(ent))
 						ShowSyncHudMsg(id, g_HudSync, "Moviendo: %s^nUltimo: %s", szCurMover, szLastMover);
